@@ -1,0 +1,411 @@
+ @import 'modalVentana.css';
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+} 
+ .main {
+        
+         margin: 0;
+    border: 0;
+    padding: 0;
+    padding-top: 70px; /*  siempre casi el mismo alto de lo que se le haya puesto al header */
+                              /* debido a que el header es fijo y los elementos que estan en la parte de arriba del main */
+                              /* no queden ocultos*/
+      
+    min-height: 100vh;
+       }
+       
+          .otro {
+            height: 30px;
+           
+            font-size: 18px;
+        }
+        
+        .container {
+        
+        
+           /* background:yellow; */
+        } 
+        
+       
+        
+        .categorias {
+            background:#fff;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+           
+            padding-bottom:  10px;
+            border-style: solid;
+            border-width: 0px 0px 1px 0px;
+            border-color:#b3b3b3;           
+            
+        }
+        
+       
+         .categorias .contenedorCategorias{
+       
+           border:1px;
+          
+           margin: 6px 6px 6px 6px;;  
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           align-content: center;
+           text-align: center;
+           width: 70px;
+           height: 70px;
+           font-family: 
+         'Quicksand', sans-serif;
+          color: #566573 ;  
+           font-size: 0.7em;
+        }
+        
+         
+        
+        .categorias .contenedorCategorias:hover  img{
+           
+          width: 55px;
+          height: 55px;
+          }
+          
+        
+          
+         .categorias .contenedorCategorias button{
+           background:#FFFFFF;
+          border: solid #FFFFFF 1px;
+         
+         }
+         
+         
+       
+         
+        /* css que se asignara dinamicamente para marcar un boton de categoria que 
+         indicara la categoria en donde se esta */
+         .categorias .contenedorCategorias .prueba2 {
+          
+          border: solid #b3b3b3 1px;   
+         }
+         
+        .categorias div img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 2px;
+        }
+        
+            
+          .aside {
+            background:#e5e7e9;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .aside #imagenCategoria {
+            /*background: yellow;*/
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            margin-right:10px;
+           /* border-radius: 50%;
+            overflow:hidden; */
+         
+        }
+        .aside #imagenCategoria img {
+            width: 100%;
+            height: 100%;
+            
+        }
+        
+        
+          
+        
+        .aside .selector {
+            
+            border-radius:2em;
+            width: 280px;
+            
+            background: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            outline: 0; 
+  	    border: 0;
+             font-family: 
+	'Quicksand', sans-serif;
+           font-size: 1em;
+            color:#787675; 
+           
+           
+        }
+        
+        .aside .selector input {
+            
+            width: 240px;
+            padding-left: 10px;
+            outline: 0; 
+  	    border: 0;
+            height: 40px;
+        }
+        
+        .aside .selector .contenedorPreloader {
+            width: 32px;
+           /* background: yellow;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 3px;
+            
+            
+           
+           
+        }
+        
+           
+ 
+        .aside .selector button {
+            width: 60px;
+            background:#0074d9;
+            border-bottom-right-radius:2em;
+            border-top-right-radius:2em;
+            
+            outline: 0; 
+  	    border: 0;
+        }
+        
+        /* --- Clase que agregaremos cuando el usuario haga scroll --- 
+        para fijar un elemento en la parte superior de la ventana*/
+     .menu-fixed {
+        
+	position:fixed;
+	z-index:5;
+	top:70px; /* el ancho del header*/
+       width: 100%;
+        
+	
+     }
+            
+           
+        #franjaSuperior {
+           
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+      
+        article {
+          /*  background:#e5e7e9;*/
+            margin-top: 3px;
+            min-height: 55vh;
+            display: flex;
+            justify-content: space-around;
+            align-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            
+            
+           }
+          
+ article .articulo {
+ /*background:#28d; */ 
+ 
+width: 150px;
+ /* transition: all 2s; */
+ margin-top: 0px;
+ margin-bottom: 20px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-right: 7px; 
+ border: 1px solid  #EAEDED ;
+ 
+  
+}  
+ 
+article .articulo .foto {
+ 
+ /*background:aqua;*/
+ margin: 2px 2px 20px 2px; /*arriba, derecha, abajo, izquierda*/
+height: 120px;
+ /*border: 2px solid  #adb9c3*/ ;
+}
+
+article .articulo .foto span {
+    margin-left: 5px;
+}
+
+article .articulo .foto img{
+width: 90%;
+height: 90%;
+
+}
+
+
+
+.main .mensajeVacia {
+    display: flex;
+    justify-content: center;
+}
+
+article .articulo .informacion {
+ /*background:#b3b3b3;*/  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+
+
+article .articulo .informacion #detalles{
+    height: 40px;
+   /*background: yellow;*/
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color:#007bff;
+}
+
+
+
+
+
+
+article .articulo .separador{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  color:#888;
+}
+
+
+
+
+article .articulo #precio {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+article .articulo #compras {
+    display: flex;
+    background:#F1F1F1;
+    margin-top: auto;
+    width: 100%;
+    height: 40px;
+   justify-content: center;
+   align-items: center;
+    
+}
+
+article .articulo #compras #botonCarrito {
+ position: relative;
+ display: flex;  
+justify-content:space-around;
+align-content: center;
+ background:#F5B041;
+align-items: center;
+border-radius: 10px;
+ padding-right: 15px;
+ padding-left: 15px;
+ height: 100%;
+ border: 0;
+  border: solid #F5B041 1px;
+  color: #FFF;
+  
+}
+
+article .articulo #compras #botonCarrito img {
+    position: absolute; /* para poner una imagen de carrito sobre la otra*/
+    bottom: 10px;
+   
+}
+
+article .articulo #compras #botonCarrito:hover {
+     background:#FFFFFF;
+    color:#F5B041;
+   
+    border: solid #F5B041 1px;
+    
+}
+
+article .articulo #compras #botonCarrito:hover  #imagen2{
+ /* para hacer transparente el carrit de arriba y se vea el de abajo*/ 
+   opacity: 0;  
+}
+
+/* boton flecha para ir o subir al contenido inicial de la pagina */
+.ir-arriba {
+	display:none;
+	padding:6px;
+	background:transparent;
+	
+	z-index: 3;
+	cursor:pointer;
+	position: fixed;
+	bottom:3px;
+	right:6px;
+    border-radius: 10px;
+    border-style: solid;
+   border-width: 2px 2px 2px 2px;
+   border-color: #0074d9 ;
+}
+
+
+        
+ /****************************************************************************/       
+   
+       
+           
+        
+        @media (min-width: 751px)
+    {
+         .main {
+         padding-top: 13vh; /*  siempre casi el mismo alto de lo que se le haya puesto al header */
+                              /* debido a que el header es fijo y los elementos que estan en la parte de arriba del main */
+                              /* no queden ocultos*/
+       
+       } 
+       
+         /* --- Clase que agregaremos cuando el usuario haga scroll --- 
+        para fijar un elemento en la parte superior de la ventana*/
+     
+       
+    
+        
+        article .articulo {
+ /*background:#28d; */ 
+ 
+width: 170px;
+
+ 
+  
+}  
+ 
+article .articulo .foto {
+ 
+ 
+height: 160px;
+
+}
+
+
+
+article .articulo .foto img{
+width: 100%;
+height: 100%;
+
+}
+
+
+     
+	
+    
+    }
